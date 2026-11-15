@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'sos-online-' + self.registration.scope;
-const CACHE_NAME = CACHE_PREFIX + 'v15';
+const CACHE_NAME = CACHE_PREFIX + 'v16';
 const ASSETS = [
   './',
   './index.html',
@@ -57,6 +57,13 @@ self.addEventListener('fetch', (e) => {
         caches.open(CACHE_NAME).then((cache) => cache.put(e.request, clone)).catch(() => {});
         return res;
       })
-      .catch(() => caches.match(e.request))
+      .catch(async () => {
+        const cached = await caches.match(e.request);
+        if (cached) return cached;
+        if (e.request.mode === 'navigate' && url.origin === self.location.origin && url.href.startsWith(self.registration.scope)) {
+          return (await caches.match(new URL('index.html', self.registration.scope).href)) || Response.error();
+        }
+        return Response.error();
+      })
   );
 });
