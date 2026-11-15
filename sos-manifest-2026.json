@@ -1,0 +1,62 @@
+{
+  "id": "./sos-2026",
+  "name": "SOS",
+  "short_name": "SOS",
+  "description": "Arkadaşlarınla şifreli özel odalarda veya kilitli eleme turnuvasında canlı SOS oyna!",
+  "lang": "tr",
+  "dir": "ltr",
+  "start_url": "./?v=2026",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": [
+    "standalone",
+    "fullscreen"
+  ],
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "categories": [
+    "games",
+    "entertainment",
+    "strategy"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./red-sos-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./red-sos-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./red-sos-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./red-sos-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
